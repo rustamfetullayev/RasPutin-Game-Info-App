@@ -1,0 +1,64 @@
+.Game .image-inner {
+  position: relative;
+  height: 500px;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.Game .logo-inner {
+  position: relative;
+  height: 350px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.Game .logo-inner::before,
+.image-inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 20;
+}
+
+.Game img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Game .title {
+  color: #ec7532;
+}
+
+.Game .statistics .requirements {
+  padding: 20px;
+  box-shadow: 10px 10px 10px 0px grey;
+  border-bottom-right-radius: 100px;
+}
+
+.Game .statistics .requirements {
+  border-bottom: 1px solid #ec7532;
+  border-right: 1px solid #ec7532;
+}
+
+.Game .statistics .rating ul {
+  display: flex;
+  list-style: none;
+}
+
+.Game .statistics .rating ul li {
+  margin-right: 20px;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+.Game .statistics .rating ul li a{
+    text-decoration: none;
+    color: gold;
+}
+
+.Game .statistics .rating ul li span {
+  color: #ec7532;
+}

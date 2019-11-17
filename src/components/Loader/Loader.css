@@ -1,0 +1,23 @@
+.Loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.Loader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  animation: popAnimation 2s linear infinite;
+}
+
+@keyframes popAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
