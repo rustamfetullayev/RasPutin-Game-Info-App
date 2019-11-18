@@ -8,7 +8,7 @@
 .Game .logo-inner {
   position: relative;
   height: 350px;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
   overflow: hidden;
 }
 
@@ -54,11 +54,30 @@
   font-weight: 800;
 }
 
-.Game .statistics .rating ul li a{
-    text-decoration: none;
-    color: gold;
+.Game .statistics .rating ul li a {
+  text-decoration: none;
+  color: gold;
 }
 
 .Game .statistics .rating ul li span {
   color: #ec7532;
+}
+
+.back-to {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: #fa975e;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.back-to:hover{
+  background-color: #ec7532;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.1);
 }

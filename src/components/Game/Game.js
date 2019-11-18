@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
 import { server } from "../../hoc/Axios/Axios";
 import "./Game.css";
@@ -15,7 +16,6 @@ export default class Game extends Component {
     server
       .get(`${this.props.match.url}`)
       .then(response => {
-        console.log(response.data.platforms[0]);
         this.setState({
           loading: false,
           game: {
@@ -25,8 +25,12 @@ export default class Game extends Component {
             background_image_additional:
               response.data.background_image_additional,
             requirements: {
-              minimum: response.data.platforms[0].requirements ? response.data.platforms[0].requirements.minimum : null,
-              recommended: response.data.platforms[0].requirements ? response.data.platforms[0].requirements.recommended : null
+              minimum: response.data.platforms[0].requirements
+                ? response.data.platforms[0].requirements.minimum
+                : null,
+              recommended: response.data.platforms[0].requirements
+                ? response.data.platforms[0].requirements.recommended
+                : null
             },
             rating: response.data.rating,
             released: response.data.released,
@@ -46,6 +50,16 @@ export default class Game extends Component {
           <Loader />
         ) : (
           <section className="Game">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-2">
+                  <NavLink title="Back to previous page" className='back-to' to={{
+                    pathname: `/`,
+                    page: this.props.location.page
+                  }}>←</NavLink>
+                </div>
+              </div>
+            </div>
             <div className="container">
               <div className="row pt-5 pb-5">
                 <div className="col-md-12 mb-5">
