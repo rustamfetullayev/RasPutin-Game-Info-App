@@ -1,0 +1,37 @@
+.pagination {
+  width: 100%;
+}
+
+.pagination .pag-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+  margin: 0px!important;
+  padding: 0px!important;
+}
+
+.pagination .pag-list .pag-item {
+  border: 2px solid #ec7532;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ec7532;
+  font-weight: 800;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.pagination .pag-list .jump{
+    width: 110px;
+    border-radius: 20px;
+}
+
+.pagination .pag-list .pag-item:hover,
+.pagination .pag-list .pag-item.active {
+  background-color: #ec7532;
+  color: white;
+}
